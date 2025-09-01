@@ -1,0 +1,250 @@
+:root {
+    --bg-dark: #0a0a0a;
+    --text-light: #e5e5e5;
+    --text-dark: #a3a3a3;
+    --accent: #7c3aed; /* violet-600 */
+}
+
+html {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-dark);
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* removed unused styles */
+
+/* Header */
+.hire-me-btn {
+    background-color: var(--accent);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 999px;
+    font-weight: 600;
+    transition: transform 0.2s;
+}
+.hire-me-btn:hover {
+    transform: scale(1.05);
+}
+
+/* KS Logo Text Styling */
+#ks-logo {
+    color: var(--text-light);
+    font-size: 2rem;
+    font-weight: 800;
+    filter: url(#liquid-filter); /* Apply the SVG filter */
+    transition: filter 0.3s ease; /* For smooth filter transitions */
+}
+
+/* Hero */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #0a0a0a;
+    z-index: 1;
+}
+
+#hero {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title span, .hero-subtitle span {
+    opacity: 0;
+    transform: translateY(100%);
+    display: inline-block;
+}
+
+.cta-btn {
+    display: inline-block;
+    background-color: var(--accent);
+    color: white;
+    padding: 16px 32px;
+    border-radius: 999px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: transform 0.3s;
+}
+.cta-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Work Section - Horizontal Scroll */
+#work {
+    padding-bottom: 10rem;
+}
+
+#work-container {
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.work-track {
+    height: 100%;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    width: max-content;
+}
+
+.project-card {
+    width: 50vw; /* Default for larger screens */
+    max-width: 800px; /* Max width for desktop */
+    height: 60vh;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    background-color: #1a1a1a;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.project-iframe-preview {
+    width: 100%;
+    height: 100%;
+    border: none;
+    pointer-events: none; /* Make it non-interactive */
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.project-overlay h3 {
+    position: static;
+    margin-bottom: 1rem;
+}
+
+.project-description {
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    max-width: 80%;
+}
+
+.view-site-btn {
+    position: static;
+    background-color: var(--accent);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-weight: 600;
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* General Section Styling */
+/* Section titles visible by default; GSAP will animate them in */
+.section-title {
+    opacity: 1;
+}
+
+/* Super link: small RGB gradient glow */
+.super-link {
+    font-size: 0.75rem; /* small */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: transparent;
+    background: linear-gradient(90deg, #ff0000, #ff4500, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff, #ff0000);
+    background-size: 400% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3), 0 0 12px rgba(255, 0, 0, 0.8), 0 0 18px rgba(0, 255, 255, 0.7);
+    animation: super-rainbow 2s linear infinite, super-glow 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes super-rainbow {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* Keep gradient text on hover */
+.super-link:hover {
+    color: transparent;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.4), 0 0 16px rgba(255, 0, 0, 1), 0 0 24px rgba(0, 255, 255, 0.9);
+}
+
+@keyframes super-glow {
+    0% { text-shadow: 0 0 8px rgba(255, 255, 255, 0.25), 0 0 12px rgba(255, 0, 0, 0.7), 0 0 18px rgba(0, 255, 255, 0.6); }
+    100% { text-shadow: 0 0 12px rgba(255, 255, 255, 0.4), 0 0 16px rgba(255, 0, 0, 1), 0 0 24px rgba(0, 255, 255, 0.9); }
+}
+
+/* Contact & Footer */
+.contact-email {
+    transition: color 0.3s;
+}
+.contact-email:hover {
+    color: white;
+}
+
+footer a {
+    transition: color 0.3s;
+}
+footer a:hover {
+    color: var(--accent);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .work-track {
+        gap: 2rem;
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    .project-card {
+        width: 85vw; /* Wider on smaller screens */
+        height: 50vh; /* Adjust height for mobile */
+    }
+
+    .project-overlay {
+        padding: 1rem;
+    }
+
+    .project-overlay h3 {
+        font-size: 1.2rem;
+    }
+
+    .project-description {
+        font-size: 0.9rem;
+        max-width: 90%;
+    }
+
+    .view-site-btn {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+}
