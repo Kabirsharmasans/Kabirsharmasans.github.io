@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How I Built a Fast, Animated Portfolio with Tailwind & GSAP</title>
+  <meta name="description" content="A breakdown of design decisions, performance tricks, and animation techniques used to build a fast, animated portfolio." />
+  <meta name="theme-color" content="#0a0a0a" />
+  <link rel="canonical" href="https://kabirsans.me/blog/how-i-built-fast-portfolio.html" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-gray-300 font-sans">
+
+  <main class="container mx-auto px-6 py-16">
+    <a href="../index.html#blog" class="text-purple-400 hover:text-purple-300">← Back to Blog</a>
+    <article class="prose prose-invert max-w-3xl mx-auto">
+      <h1 class="text-3xl md:text-4xl font-extrabold text-white mb-4">How I Built a Fast, Animated Portfolio with Tailwind & GSAP</h1>
+      <p class="text-gray-400 mb-6">Published Sep 2025 • 5 min read</p>
+      <p class="mb-4">This portfolio focuses on performance and delightful motion. Here’s a quick summary of the stack and key techniques:</p>
+      <ul class="list-disc pl-6 mb-6 text-gray-300">
+        <li>Tailwind CSS via CDN for rapid styling and consistent spacing.</li>
+        <li>GSAP for low-cost, well-controlled animations with ScrollTrigger and ScrollTo.</li>
+        <li>Particles.js hero background with a lightweight configuration.</li>
+        <li>Lazy loading for media, deferring scripts, and small CSS touches for perceived performance.</li>
+      </ul>
+      <h2 class="text-2xl font-bold text-white mb-3">Animation Approach</h2>
+      <p class="mb-4">Use GSAP timelines to stage intro animations and staggered reveals. Keep durations short and easing subtle. For scroll-triggered sections, animate when each heading enters the viewport.</p>
+      <h2 class="text-2xl font-bold text-white mb-3">Performance Wins</h2>
+      <ul class="list-disc pl-6 mb-6 text-gray-300">
+        <li>Deferred third-party scripts (GSAP, Particles).</li>
+        <li>Lazy loading iframes and images where applicable.</li>
+        <li>Preconnect hints and a small preloader that fades out quickly.</li>
+      </ul>
+      <p class="mb-4">Future work includes a dark/light theme toggle, image compression, and case study pages with deep dives.</p>
+      <p class="mb-8">If you’d like something similar, <a class="text-green-400 hover:text-green-300" href="https://wa.me/918860019781?text=Hi%20Kabir!%20I%20loved%20your%20portfolio%20article.%20Can%20you%20build%20a%20site%20like%20this%20for%20me%3F" target="_blank" rel="noopener noreferrer">message me on WhatsApp</a>.</p>
+    </article>
+  </main>
+</body>
+</html>
